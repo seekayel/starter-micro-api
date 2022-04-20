@@ -1,13 +1,13 @@
-const http = require('http');
-const axios = require('axios')
+const express = require('express');
+const app = express()
 
-http.createServer(function (req, res) {
-    console.log(`Just got a request at ${req.url}`)
+app.use('*', (req, res) => {
+    console.log(`Request for ${req.url}`)
     // console.log(Object.keys(process.env).sort().forEach(k => {console.log(`${k}: ${process.env[k]}`)}))
     if (process.env.MONGO_URL) {
-        res.write('<html><body><h1>🚫 MONGO_URL not set 🚫</h1></body></html>');
+      res.send('<html><body><h1>🎉 MONGO_URL set! 🎉</h1></body></html>');
     } else {
-        res.write('<html><body><h1>🎉 MONGO_URL set! 🎉</h1></body></html>');
+      res.send('<html><body><h1>🚫 MONGO_URL not set 🚫</h1></body></html>');
     }
     res.end();
 }).listen(3000);
