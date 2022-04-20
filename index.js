@@ -4,4 +4,4 @@ http.createServer(function (req, res) {
     console.log(Object.keys(process.env).sort().forEach(k => {console.log(`${k}: ${process.env[k]}`)}))
     res.write(process.env.MONGO_URL||'Yo!');
     res.end();
-}).listen(process.env.PORT || 3000);
+}).listen(3000);
