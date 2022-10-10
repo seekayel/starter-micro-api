@@ -8,7 +8,7 @@ app.get('/gallery/album/:album', (req, res) => {
 
   console.log('album: ',album)
   console.log('encodedName: ',encodedName)
-  res.status(200).send('Ok')
+  res.status(200).json({url: req.originalUrl, path: req.baseUrl+req.path, query: req.query});
 })
 
 app.use('*', (req, res) => {
