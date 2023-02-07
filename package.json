@@ -2,7 +2,7 @@
   "name": "starter-micro-api",
   "version": "1.0.0",
   "description": "",
-  "xmain": "index.js",
+  "main": "index.js",
   "scripts": {
     "xstart": "node index.js",
     "build": "env",
