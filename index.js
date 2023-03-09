@@ -11,6 +11,13 @@ app.get('/gallery/album/:album', (req, res) => {
   res.status(200).json({url: req.originalUrl, path: req.baseUrl+req.path, query: req.query});
 })
 
+app.all('/auth*', (req, res) => {
+  console.log('AUTH ####################################################')
+  console.log('AUTH ####################################################')
+  console.log('AUTH ####################################################')
+  res.json({auth: true, url: req.originalUrl, path: req.baseUrl+req.path, query: req.query});
+})
+
 app.use('*', (req, res) => {
   console.log('BREACH ####################################################')
   console.log('BREACH ####################################################')
@@ -23,4 +30,6 @@ app.use('*', (req, res) => {
     res.send('<html><body><h1>Wanting to send json. Sorry.</h1></body></html>');
   }
   res.end();
-}).listen(3000);
+})
+
+app.listen(3000);
