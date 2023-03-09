@@ -19,9 +19,9 @@ app.all('/auth*', (req, res) => {
 })
 
 app.use('*', (req, res) => {
-  console.log('BREACH ####################################################')
-  console.log('BREACH ####################################################')
-  console.log('BREACH ####################################################')
+  console.log('meh ------------')
+  console.log('meh ------------')
+  console.log('meh ------------')
   console.log(`Request for ${req.url}`)
   // console.log(Object.keys(process.env).sort().forEach(k => {console.log(`${k}: ${process.env[k]}`)}))
   if (req.accepts('json')) {
