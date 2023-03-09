@@ -4,7 +4,7 @@
   "description": "",
   "main": "xindex.js",
   "scripts": {
-    "xstart": "node index.js",
+    "start": "node index.js",
     "build": "env",
     "dev": "nodemon index.js"
   },
