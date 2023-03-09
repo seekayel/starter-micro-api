@@ -12,6 +12,9 @@ app.get('/gallery/album/:album', (req, res) => {
 })
 
 app.use('*', (req, res) => {
+  console.log('BREACH ####################################################')
+  console.log('BREACH ####################################################')
+  console.log('BREACH ####################################################')
   console.log(`Request for ${req.url}`)
   // console.log(Object.keys(process.env).sort().forEach(k => {console.log(`${k}: ${process.env[k]}`)}))
   if (req.accepts('json')) {
