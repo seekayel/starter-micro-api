@@ -5,7 +5,7 @@
   "main": "xindex.js",
   "scripts": {
     "start": "node index.js",
-    "build": "env",
+    "build": "env | sort",
     "dev": "nodemon index.js"
   },
   "author": "",
